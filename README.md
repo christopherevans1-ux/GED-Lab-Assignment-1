@@ -58,3 +58,10 @@ I have 1 audio source on the player that plays different sound effects given cer
 Question 2: The singleton pattern works well with an audio manager design since it allows me to easily keep track of sound effects across the entire game. 
 If one sound is played incorrectly, I don't have to go digging through multiple files to find the source. IT allows all sound effects to live
 comfortably in one space that never needs to be re-created upon restart, or a new level(scene).
+
+
+External Assets used:
+Mario jump sound effect from youtube
+fortnite death sound effect from youtube
+tom from tom and jerry scream sound effect from youtube
+win sound effect no copyright from youtube
