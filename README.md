@@ -6,7 +6,6 @@ Project Title: Project Running Man
 Gameplay Loop: Player starts at the beginning of the level. They must traverse the level and dodge or kill enemies to get to the goal and beat the level.
 
 Diagram: (psudocode)
-namespace grab singleton namespace
 
   public class AudioManager : inherits from Singleton<grabbing AudioManager>
 // ---Initialization---
@@ -16,6 +15,7 @@ namespace grab singleton namespace
   sound effect winSound
   sound effect enemyDeathSound
   Grab AudioSource (named audioSource)
+  // ---GameLoop---
  function Update():
     player = find player gameobject
     audioSource = find object in scene with the same type as AudioSource
@@ -27,9 +27,30 @@ namespace grab singleton namespace
       play death sound effect
     if(player beat the level):
       play win sound effect
+  Public class Singleton: Monobehaviour with placeholder component
 
-    
-  
+  // ---Initialization---
+  private Static instance of placeholder (_instance)
+
+  //---GameLoop---
+  Public Static placeholder Instance:
+  get:
+    if(_instance is null)
+      _instance = find instance is scene
+        if(_instance is null):
+        crate new gameobject
+        object name = placeholder name
+        _instance = object with placeholder component
+
+  return _instance
+
+
+  public virtual void Awake():
+    if(_instance is null):
+      _instance = this placeholder
+      do not destroy instance gameobject
+    else:
+    destroy instance gameobject
 
 Question 1: The sound adopts my use of the singleton pattern. Rather than having sound effects dealt with on sperate objects with multiple audio sources. 
 I have 1 audio source on the player that plays different sound effects given certain situations like jumping, death, and upon completing the level.
